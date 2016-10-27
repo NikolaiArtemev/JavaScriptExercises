@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function isPrime(value) {
+            var result = value > 1;
+
+            for (var i = 2; i <= value && result; i++) {
+                if (i != value) {
+                    result = value % i != 0;     
+                                   
+                    if (!result) 
+                        break;
+                }
+            }
+
+            return result;
+        }
+
+        console.log(isPrime(5)); // true
+        console.log(isPrime(6)); // false
+    </script>
+
+</body>    
+</html>

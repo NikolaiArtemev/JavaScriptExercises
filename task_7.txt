@@ -1,0 +1,8 @@
+The result will be:
+3
+2
+1
+
+0 - will be converted to false and that is the condition to finish our loop
+1 - will be converted to true
+2 and 3 will be converted to common type (boolean type) and it will be true (truthy and falsy)
