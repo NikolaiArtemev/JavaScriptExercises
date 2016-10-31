@@ -1,0 +1,7 @@
+function a() { return 1; }
+console.log(a);
+result will be "function declaration text" cause the function was called as variable but not as a function "a()"
+---
+(function g() { return 1; });
+console.log(g);
+result will be "g is undefined" because the function has been declared inside closure

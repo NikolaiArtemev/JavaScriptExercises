@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        var salaries = {
+            "Andrew": 10000,
+            "Peter": 12300,
+            "John": 14500
+        };
+
+        function countSalariesSum(values) {
+            if (Object.keys(values).length == 0) {
+                return 0;
+            }
+
+            let sum = 0;
+            Object.keys(values).forEach(function(key) {
+                sum += values[key];
+            });
+
+            console.log(sum);
+            return sum;
+        }
+
+        countSalariesSum(salaries); // 36800
+    </script>
+
+</body>
+</html>

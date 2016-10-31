@@ -1,0 +1,38 @@
+<!DOCUTYPE html>
+<html>
+<body>
+
+    <script>
+        let resObject = {
+            name: "",
+            count: 0
+        };
+
+        function getMostFrequentItem(arr){
+            let localArr = new Array(arr);
+
+            arr.forEach(function(item){
+                let count = 0; 
+                let index = arr.indexOf(item);
+                while(index > -1){
+                    count++;
+                    arr.splice(index, 1);                                      
+                    index = arr.indexOf(item);                    
+                }
+
+                if(count > resObject.count){
+                    resObject.name = item;
+                    resObject.count = count;             
+                }
+            });
+
+            console.log("'" + resObject.name + "' ("+ resObject.count + " times)");
+            return resObject;
+        }
+
+        var items = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        getMostFrequentItem(items); // output: 'a' (5 times)
+    </script>
+
+</body>
+</html>

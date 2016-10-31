@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function isEmpty(obj) {
+            if(Object.keys(obj).length == 0){
+                return true;
+            }
+
+            return false;            
+        }
+
+        var schedule = {};
+        console.log(isEmpty(schedule)); // true
+
+        schedule["12:30"] = "lunch";
+        console.log(isEmpty(schedule)); // false
+    </script>
+
+</body>    
+</html>

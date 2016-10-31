@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function toCamelCase(str){
+            let result = "";
+            let arr = str.split("-");
+
+            arr.forEach(function(item){
+                result += item.charAt(0).toUpperCase();
+                result += item.substring(1);
+            })
+
+            console.log(result);
+            return result;
+        }
+
+        toCamelCase('to-camel-case'); // toCamelCase
+        toCamelCase('border-top-left-radius'); // borderTopLeftRadius
+    </script>
+
+</body>    
+</html>

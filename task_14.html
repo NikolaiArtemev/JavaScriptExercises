@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function getMaxSubSum(arr) {
+            var sum = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+                var subSum = 0;
+
+                for (var j = i; j < arr.length; j++) {
+                    subSum += arr[j];
+                    //console.log("subSum = " + subSum);
+                    sum = Math.max(sum, subSum);
+                    //console.log("sum = " + sum);
+                }
+            }
+
+            console.log(sum);
+            return sum;
+        }
+
+        getMaxSubSum([-1, 2, 3, -9]); // 2 + 3 = 5
+        getMaxSubSum([2, -1, 2, 3, -9]); // 6
+        getMaxSubSum([-1, 2, 3, -9, 11]); // 11
+        getMaxSubSum([-2, -1, 1, 2]); // 3
+        getMaxSubSum([100, -9, 2, -3, 5]); // 100
+        getMaxSubSum([1, 2, 3]); // 6
+
+        getMaxSubSum([1, -2, 3, 4, -9, 6]); // 7
+    </script>
+
+</body>
+</html>

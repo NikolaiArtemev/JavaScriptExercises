@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function unique(arr){
+            let res = new Array();
+
+            for(var i = 0; i < arr.length; i++){
+                if(res.indexOf(arr[i]) === -1){
+                    res.push(arr[i]);
+                }
+            }
+
+            console.log(res.toString());
+            return res;
+        }
+
+        var strings = ['apple', 'carrot', 'pie', 'orange', 'apple', 'juice', 'pie'];
+        unique(strings); // apple, carrot, pie, orange, juice
+    </script>
+
+</body>    
+</html>
