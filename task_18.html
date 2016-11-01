@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function reverseNumber(num){
+            let res = null;
+
+            if(num != undefined || num != null ){
+                let arr = num.toString()
+                             .split("")
+                             .reverse()
+                             .join("");
+
+                res = Number(arr);
+            }
+
+            console.log(res);
+            return res;
+        }
+
+        reverseNumber(12345); // 54321
+        reverseNumber(); // null
+    </script>
+
+</body>    
+</html>

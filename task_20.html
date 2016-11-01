@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function getFirstNotRepeatedCharacter(str){
+            let arr = str.split("");
+            let res = null;
+            
+            for(let i = 1; i < arr.length / 2; i++){
+                if(arr[i -1] != arr[arr.length -i]){
+                    res = i-1;
+                    break;
+                }
+            }
+            
+            console.log(res);
+            return res;
+        }
+
+        getFirstNotRepeatedCharacter('abcdefggfedcba'); // null
+        getFirstNotRepeatedCharacter('djodelkoejod'); // l
+    </script>
+
+</body>    
+</html>
