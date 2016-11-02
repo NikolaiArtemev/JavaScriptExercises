@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function Timer(action, delay){    
+            this.action = action; 
+            this.delay = delay;
+            this.timer;
+            
+            this.start = function(){
+                this.timer = setInterval(action, delay);
+            }
+
+            this.stop = function(){
+                clearInterval(this.timer);
+            }
+        };
+
+        let val = 0;
+        function action(){
+            console.log(val++);
+        }
+
+        var timer = new Timer(action, 500);
+
+        timer.start();
+        // console.log: 1
+        // console.log: 2
+        // console.log: 3
+        // console.log: ...
+        setTimeout(function(){
+            timer.stop();
+        }, 2000);
+    </script>
+
+</body>    
+</html>

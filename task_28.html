@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        var song = {
+            title: 'Ghentleman Render 2',
+            artist: 'Bjarki',
+            year: 2016,
+            isLiked: true
+        };
+        
+        song.removeProperty = function(prop){
+            delete song[prop];
+        };
+
+        song.removeProperty("isLiked");
+        console.log(song);
+    </script>
+
+</body>    
+</html>

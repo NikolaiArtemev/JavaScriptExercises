@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function checkSpam(str){
+            let spamKey = "mackeeper";
+
+            let res = str.toLowerCase().indexOf(spamKey) != -1;
+           
+            console.log(res.toString());
+            return res;
+        }
+
+        checkSpam('Download new MacKeeper'); // true
+        checkSpam('New message on Slack'); // false
+    </script>
+
+</body>    
+</html>

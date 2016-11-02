@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function sumArgs(){
+            let total = 0;
+
+            Array.from(arguments).forEach(function(item){
+                total += item;
+            });
+           
+            console.log(total.toString());
+            return total;
+        }
+        
+        sumArgs(1, 2, 3, 10, 100); // 116
+        sumArgs(); // 0
+    </script>
+
+</body>    
+</html>

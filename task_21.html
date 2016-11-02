@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function isWeekend(str){
+            let day = new Date(str).getDay();
+            let res = day === 6 || day === 0;
+
+            console.log(res);
+            return res;
+        }
+
+        isWeekend('Oct 29, 2016'); // true
+        isWeekend('07 07 2016'); // false
+        isWeekend('11-13-2016'); // true
+    </script>
+
+</body>    
+</html>

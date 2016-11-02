@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function yesterday(str){
+            let date = null;
+
+            if(str == null){
+                date = new Date();
+            }
+            else date = new Date(str);
+            
+            date.setDate(date.getDate() - 1);
+
+            console.log(date.toDateString());
+            return date;
+        }
+
+        yesterday(); // Oct 26, 2016
+        yesterday('Dec 12, 2015'); // Dec 11, 2015
+        yesterday('02 21 2013'); // Feb 01, 2013 (it should be 20)
+    </script>
+
+</body>    
+</html>

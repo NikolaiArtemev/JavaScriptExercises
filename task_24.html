@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        function fibonacci(value){
+            let res = new Array();
+            for(i = 1; i < value +1; i++){
+                let f = 1;
+                if(i < 3){
+                    res.push(f);
+                }
+                else{
+                    f = res[i-2] + res[i-3];
+                    res.push(f);
+                }                
+            }
+
+            console.log(res.toString());
+            return res;
+        }
+
+        fibonacci(20); // [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
+    </script>
+
+</body>    
+</html>
