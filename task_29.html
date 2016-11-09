@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        var song = {
+            title: 'Ghentleman Render 2',
+            artist: 'Bjarki',
+            year: 2016
+        };
+
+        song.map = function(callback){
+                Object.keys(song).forEach(function(item, i, arr) {
+                    if(item !== "map"){
+                        callback(item, song[item]);
+                    }
+                });
+        }
+                
+        song.map(function(key, value) {
+            console.log(key, value);
+        });
+    </script>
+
+</body>    
+</html>
