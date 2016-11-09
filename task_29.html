@@ -10,11 +10,11 @@
         };
 
         song.map = function(callback){
-                Object.keys(song).forEach(function(item, i, arr) {
-                    if(item !== "map"){
-                        callback(item, song[item]);
-                    }
-                });
+            for(var key in this){
+                if(key !== "map"){
+                    callback(key, this[key]);
+                }
+            }
         }
                 
         song.map(function(key, value) {
