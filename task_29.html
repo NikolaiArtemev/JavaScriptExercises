@@ -11,7 +11,7 @@
 
         Object.prototype.map = function(callback){
             for(var key in this){
-                if(key !== "map"){
+                if(hasOwnProperty.call(this, key)){
                     callback(key, this[key]);
                 }
             }
