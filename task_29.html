@@ -9,7 +9,7 @@
             year: 2016
         };
 
-        song.map = function(callback){
+        Object.prototype.map = function(callback){
             for(var key in this){
                 if(key !== "map"){
                     callback(key, this[key]);
