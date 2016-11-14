@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        var count = 0;
+        var created = 0;
+
+        function Article() {
+            this.created = +new Date();
+
+            count++;
+            created = this.created;
+        }
+
+        Function.prototype.getStats = function(){
+            console.log("total: " + count + ", last: " + created);
+        };
+             
+        new Article();
+        new Article();
+        Article.getStats(); // total: 2, last: 1477572867451
+        
+        new Article();
+        Article.getStats(); // total: 3, last: 1477572890118
+    </script>
+
+</body>    
+</html>
