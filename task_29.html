@@ -3,23 +3,41 @@
 <body>
 
     <script>
+        Object.prototype.map = function(callback){
+            var keys = Object.getOwnPropertyNames(this);
+
+            for(var i=0; i < keys.length; i++){
+                var key = keys[i];
+                var value = this[key];
+                callback(key, value);                
+            }
+        }
+
+        //P1
         var song = {
             title: 'Ghentleman Render 2',
             artist: 'Bjarki',
             year: 2016
         };
 
-        Object.prototype.map = function(callback){
-            for(var key in this){
-                if(hasOwnProperty.call(this, key)){
-                    callback(key, this[key]);
-                }
-            }
-        }
-                
-        song.map(function(key, value) {
-            console.log(key, value);
+        song.map(function(key, value, index) {
+            console.log(key, value, index) // 'title' 'Ghentleman Render 2' 0
         });
+
+        //P2
+        var oldInstance = {
+            i0: 1,
+            i1: 3,
+            i2: 5,
+            i5: 10
+        };
+
+        var newInstance = oldInstance.map(function(key, value, index) {
+            //console.log(value * 2);
+            return value * 2;
+        });
+
+        console.log(newInstance); // { i0: 2, i1: 6, i2: 10, i5: 20}
     </script>
 
 </body>    
