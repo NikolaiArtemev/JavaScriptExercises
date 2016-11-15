@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        var makeBuffer = function(){
+            this.stringArray = new Array();
+
+            var buffer = function(str){
+                if(str === undefined){
+                    console.log(stringArray.join(""));
+                }
+                else{
+                    stringArray.push(str);
+                }
+            }
+
+            return buffer;
+        }
+
+        var buffer = makeBuffer();
+
+        buffer('closures ');
+        buffer('are ');
+        buffer('cool!');
+
+        buffer(); // 'closures are cool!'
+    </script>
+
+</body>    
+</html>
