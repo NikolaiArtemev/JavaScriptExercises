@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <script>
+        var obj, method;
+
+        obj = {
+            run: function() {
+                console.log(this);
+            }
+        };
+
+        obj.run(); // (1) object
+        (obj.run)(); // (2) object
+
+        //Current context for the run method will be changed on a Window
+        //so the run method will print a Window object
+        (method = obj.run)();
+
+        //The stop property is undefined
+        //so the run method will be executed but  context will be changed to a Window
+        (obj.run || obj.stop)();
+    </script>
+
+</body>    
+</html>
